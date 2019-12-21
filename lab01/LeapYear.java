@@ -4,6 +4,18 @@
  */
 public class LeapYear {
 
+    /**
+     * Determines whether or not a year is a leap year.
+     * @source CS 61BL Lab 1
+     */
+    public static boolean isLeapYear(int year) {
+        if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     /** Calls isLeapYear to print correct statement. */
     private static void checkLeapYear(int year) {
         if (isLeapYear(year)) {
